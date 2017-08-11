@@ -1,0 +1,19 @@
+#dashboard.uk-offcanvas{'uk-offcanvas' => 'mode: push; overlay: true; flip: true'}
+  .uk-offcanvas-bar
+    %button.uk-offcanvas-close{:type=>'button', 'uk-close'=>true}
+    %h3 Dashboard
+    %p Hi, and welcome to Flight Chord!
+    %hr
+    %form
+      .uk-margin
+        .uk-inline.uk-width-1-1
+          %span.uk-form-icon.uk-form-icon-flip{'uk-icon' => 'icon: mail'}
+          %input.uk-input{:type => 'email', :name => 'email', :placeholder => 'Email address'}
+      .uk-margin
+        .uk-inline.uk-width-1-1
+          %a.uk-form-icon.uk-form-icon-flip{'uk-icon' => 'icon: lock', :title => 'Show password', 'uk-tooltip' => 'pos: left'}
+          %input.uk-input{:type => 'password', :name => 'password', :placeholder => 'Password'}
+      .uk-margin
+        .uk-button-group.uk-width-1-1
+          %button.uk-button.uk-button-link.uk-width-1-2{:href => '#', 'uk-icon' => 'icon: settings', :title => 'Reset Password', 'uk-tooltip' => 'pos: bottom'}
+          %button.uk-button.uk-button-default.uk-width-1-2{:type => 'submit', 'uk-icon' => 'icon: sign-in', :title => 'Sign In', 'uk-tooltip' => 'pos: bottom'}
