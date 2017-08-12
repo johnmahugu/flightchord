@@ -1,0 +1,4 @@
+- flash.each do |type, message|
+  .uk-width-1-1{'uk-alert' => true, :class => uikit_alert(type)}
+    %a.uk-alert-close(uk-close=true)
+    %p= message

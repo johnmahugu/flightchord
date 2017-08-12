@@ -33,3 +33,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+# Added at 2017-08-12 17:42:30 +1000 by shaz:
+gem "devise", "~> 4.3"

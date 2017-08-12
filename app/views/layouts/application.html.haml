@@ -9,10 +9,9 @@
   %body
     .uk-offcanvas-content
       = render 'shared/header'
-      = render 'shared/navigation'
       = render 'shared/dashboard'
-
-      .div{'uk-grid' => true}
+      = render 'shared/flash', flash: flash
+      .uk-flex-top{'uk-grid' => true}
         = yield
 
     %script{:src => '//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'}

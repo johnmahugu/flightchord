@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
 
-  resources :entries, shallow: true do
-    resource :user
-    resource :lesson
-    resource :aircraft
-    resource :flight
+  resources :organizations, shallow: true do
+    resources :users
+    resources :lessons
+    resources :aircrafts
+    resources :flights
+  end
+
+  resources :entries  do
+    resource :user, only: [:show, :edit, :update, :destroy]
+    resource :lesson, only: [:show, :edit, :update, :destroy]
+    resource :aircraft, only: [:show, :edit, :update, :destroy]
+    resource :flight, only: [:show, :edit, :update, :destroy]
   end
 
   resources :lessons, shallow: true do
@@ -22,10 +29,10 @@ Rails.application.routes.draw do
     resources :ratings
     resources :flights
   end
-  resources :flights, shallow: true do
-    resource :aircraft
-    resource :user
-    resource :entry
+  resources :flights do
+    resource :aircraft, only: [:show, :edit, :update, :destroy]
+    resources :users
+    resources :entries
   end
   resources :users, shallow: true do
     resources :entries

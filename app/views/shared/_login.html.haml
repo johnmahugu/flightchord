@@ -1,0 +1,23 @@
+%form
+  .uk-margin
+    .uk-inline.uk-width-1-1
+      %span.uk-form-icon.uk-form-icon-flip{'uk-icon' => 'icon: mail'}
+      %input.uk-input{:type => 'email', :name => 'email', :placeholder => 'Email address'}
+  .uk-margin
+    .uk-inline.uk-width-1-1
+      %a.uk-form-icon.uk-form-icon-flip{'uk-icon' => 'icon: lock', :title => 'Show password', 'uk-tooltip' => 'pos: left'}
+      %input.uk-input{:type => 'password', :name => 'password', :placeholder => 'Password'}
+  .uk-margin
+    .uk-button-group.uk-width-1-1
+      %button.uk-button.uk-button-link.uk-width-1-2{:href => '#', 'uk-icon' => 'icon: settings', :title => 'Reset Password', 'uk-tooltip' => 'pos: bottom'}
+      %button.uk-button.uk-button-default.uk-width-1-2{:type => 'submit', 'uk-icon' => 'icon: sign-in', :title => 'Sign In', 'uk-tooltip' => 'pos: bottom'}
+
+%hr
+
+.uk-button-group.uk-width-1-1
+  %button.uk-button.uk-button-text.uk-width-1-2(uk-toggle="target: #demo") Demo
+  %a.uk-button.uk-button-text.uk-width-1-2(href=new_user_path) Sign Up
+#demo.uk-button-group.uk-width-1-1(hidden)
+  %a.uk-button.uk-button-link.uk-width-1-3.uk-dark Admin
+  %a.uk-button.uk-button-link.uk-width-1-3.uk-dark Instructor
+  %a.uk-button.uk-button-link.uk-width-1-3.uk-dark Student

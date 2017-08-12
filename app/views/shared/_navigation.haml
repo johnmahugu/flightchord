@@ -1,13 +1,14 @@
 #navigation.uk-offcanvas{'uk-offcanvas' => 'mode: push; overlay: true'}
   .uk-offcanvas-bar
     %button.uk-offcanvas-close{:type=>'button', 'uk-close'=>true}
-    %h3 Navigation
+    %h3 Dashboard
     %hr
     %form
       .uk-inline.uk-width-1
         %input.uk-input{:type => 'search', :name => 'search', :placeholder => 'Search...'}
         %span.uk-form-icon.uk-form-icon-flip{'uk-icon' => 'icon: search'}
     %hr
+
     %ul.uk-nav.uk-nav-default
       %li.uk-nav-header Flights &amp; Aircraft
       %li.uk-parent
@@ -28,9 +29,9 @@
         %a(href=users_path) Manage Students
         %ul.uk-nav-sub
           %li
-            %a(href=new_entry_path) Start a new Lesson
+            %a(href=new_entry_path) Start a new Lesson Entry
           %li
-            %a(href=new_entry_path) Complete a Lesson
+            %a(href=new_entry_path) Complete a Lesson Entry
       %li.uk-nav-header Ground School
       %li
         %a Manage Ratings & Endorsements
