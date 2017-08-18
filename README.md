@@ -1,24 +1,22 @@
-# README
+# Flight Chord
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Quick Setup
 
-Things you may want to cover:
+1. Clone the Repo
+1. Update your ENV for URL's and DB access
+1. Install Gems: `bundle install`
+1. Run Migrations: `rails db:migrate`
+1. Run Tests: `rails t`
 
-* Ruby version
+Check the [Wiki](//github.com/shazm/flightchord/wiki) for more detailed information.
 
-* System dependencies
+## Contribute
 
-* Configuration
+- Follow [Github Flow](//guides.github.com/introduction/flow/)
+- Fork the Repo if you want
+- Make Updates, Commit
+- Send Pull Request!
 
-* Database creation
+Ensure good documentation and testing.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Check the [Wiki](//github.com/shazm/flightchord/wiki) for more detailed information.
