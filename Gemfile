@@ -9,12 +9,13 @@ gem 'rails', '~> 5.1.3'
 gem 'puma', '~> 3.7'
 gem 'haml-rails', '~> 1.0'
 gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
+gem 'jbuilder', '~> 2.5'
+gem 'uglifier', '>= 1.3.0'
 gem 'pg', '~> 0.21.0'
 gem 'redis', '~> 3.0'
 gem 'bcrypt', '~> 3.1.7' # Use ActiveModel has_secure_password
-
+gem 'devise', '~> 4.3'
 
 
 group :development, :test do
@@ -34,5 +35,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# Added at 2017-08-12 17:42:30 +1000 by shaz:
-gem "devise", "~> 4.3"
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# Added at 2017-09-02 19:59:12 +1000 by shaz:
+gem "jquery-rails", "~> 4.3"

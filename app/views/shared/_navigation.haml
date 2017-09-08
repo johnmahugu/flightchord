@@ -1,41 +1,46 @@
-#navigation.uk-offcanvas{'uk-offcanvas' => 'mode: push; overlay: true'}
-  .uk-offcanvas-bar
-    %button.uk-offcanvas-close{:type=>'button', 'uk-close'=>true}
-    %h3 Dashboard
-    %hr
-    %form
-      .uk-inline.uk-width-1
-        %input.uk-input{:type => 'search', :name => 'search', :placeholder => 'Search...'}
-        %span.uk-form-icon.uk-form-icon-flip{'uk-icon' => 'icon: search'}
-    %hr
+%form
+  .uk-inline.uk-width-1
+    %input.uk-input{:type => 'search', :name => 'search', :placeholder => 'Search...'}
+    %span.uk-form-icon.uk-form-icon-flip{'uk-icon' => 'icon: search'}
+%hr
 
-    %ul.uk-nav.uk-nav-default
-      %li.uk-nav-header Flights &amp; Aircraft
-      %li.uk-parent
-        %a(href=flights_path) Manage Flights
-        %ul.uk-nav-sub
-          %li
-            %a(href=new_flight_path) Prepare Flight
-          %li
-            %a(href=new_flight_path) Dispatch a Flight
-          %li
-            %a(href=new_flight_path) Complete a Flight
+%ul.uk-nav.uk-nav-default
+  %li.uk-nav-header Flights &amp; Aircraft
+  %li.uk-parent
+    %a(href=flights_path) Manage Flights
+    %ul.uk-nav-sub
       %li
-        %a(href=aircrafts_path) Manage Aircraft
-      %li.uk-nav-header Pilots
+        %a(href=new_flight_path) Prepare Flight
       %li
-        %a(href=users_path) Manage Flight Instructors
-      %li.uk-parent
-        %a(href=users_path) Manage Students
-        %ul.uk-nav-sub
-          %li
-            %a(href=new_entry_path) Start a new Lesson Entry
-          %li
-            %a(href=new_entry_path) Complete a Lesson Entry
-      %li.uk-nav-header Ground School
+        %a(href=new_flight_path) Dispatch a Flight
       %li
-        %a Manage Ratings & Endorsements
+        %a(href=new_flight_path) Complete a Flight
+  %li
+    %a(href=aircrafts_path) Manage Aircraft
+  %li.uk-nav-header Pilots
+  %li
+    %a(href=users_path) Manage Flight Instructors
+  %li.uk-parent
+    %a(href=users_path) Manage Students
+    %ul.uk-nav-sub
       %li
-        %a Manage Lessons
+        %a(href=new_entry_path) Start a new Lesson Entry
       %li
-        %a Manage Assessments
+        %a(href=new_entry_path) Complete a Lesson Entry
+  %li.uk-nav-header Ground School
+  %li
+    %a Manage Ratings & Endorsements
+  %li
+    %a Manage Lessons
+  %li
+    %a Manage Assessments
+
+%hr
+.uk-text-center
+  %a.uk-button.uk-button-default{'uk-icon' => 'icon: sign-out', :title => 'Sign Out', 'uk-tooltip' => 'pos: top', :href => destroy_user_session_path, 'data-method' => 'delete'}
+
+  -#  %form{:action=>destroy_user_session_path, :method=>'delete'}
+  -# %button.uk-button.uk-button-default{'uk-icon' => 'icon: sign-out', :title => 'Sign Out', 'uk-tooltip' => 'pos: top', :type => 'submit'}
+
+  -# = link_to "Signout", destroy_user_session_path, :confirm => "Are you sure?", :method => :delete
+

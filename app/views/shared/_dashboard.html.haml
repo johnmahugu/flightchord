@@ -2,6 +2,9 @@
   .uk-offcanvas-bar
     %button.uk-offcanvas-close{:type=>'button', 'uk-close'=>true}
     %h3 Dashboard
-    %p Hi, and welcome to Flight Chord! Please sign in to get started:
-    %hr
-    = render 'shared/login'
+    - if !user_signed_in?
+      %p Hi, and welcome to Flight Chord! Please sign in to get started:
+      %hr
+      = render 'shared/login'
+    - else
+      = render 'shared/navigation'

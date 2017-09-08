@@ -1,0 +1,19 @@
+%h1 Listing enrolments
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @enrolments.each do |enrolment|
+      %tr
+        %td= link_to 'Show', enrolment
+        %td= link_to 'Edit', edit_enrolment_path(enrolment)
+        %td= link_to 'Destroy', enrolment, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Enrolment', new_enrolment_path
